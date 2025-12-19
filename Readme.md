@@ -2,7 +2,7 @@
 ## Guide d’Installation ##
 
 Ce document décrit pas à pas l’installation et l’exécution de
-l’application Gestion des Stages sur Windows (backend Flask + frontend
+l’application Gestion des Stages (backend Flask + frontend
 HTML/JS + base de données MySQL).
 
 Prérequis
@@ -154,6 +154,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
