@@ -44,10 +44,10 @@ mkdir frontend\components
 
 explorer .
 
-Étape 2 : Configuration de la Base de Données 1. Démarrer le service
-MySQL
+Étape 2 : Configuration de la Base de Données 
+1. Démarrer le service MySQL
 
-> ● Ouvrir Services (services.msc) ● Démarrer MySQL (ou MySQL)
+>. Ouvrir Services (services.msc) ● Démarrer MySQL (ou MySQL)
 
 <img src="./yzlbtmzl.png" style="width:6.5in;height:3.65625in" />
 
@@ -61,27 +61,7 @@ python -m venv venv venv\Scripts\activate
 
 Installation des dépendances
 
-Créer le fichier requirements.txt :
-
-echo flask==2.3.3 **\>** requirements.txt
-
-echo flask-cors==4.0.0 **\>\>** requirements.txt
-
-echo mysql-connector-python==8.1.0 **\>\>** requirements.txt echo
-python-dotenv==1.0.0 **\>\>** requirements.txt
-
-echo bcrypt==4.0.1 **\>\>** requirements.txt
-
 pip install -r requirements.txt
-
-Création du fichier *.env*
-
-echo DB_HOST=localhost **\>** .env echo DB_USER=root **\>\>** .env
-
-echo DB_PASSWORD=password123@ **\>\>** .env echo DB_NAME=gestion_stages
-**\>\>** .env echo DB_PORT=3306 **\>\>** .env
-
-echo FLASK_DEBUG=True **\>\>** .env
 
 ⚠ Remplacez **password123@**par votre mot de passe MySQL réel
 
@@ -108,14 +88,6 @@ DB_CONFIG = {
 > 'database': os.getenv('DB_NAME', 'gestion_stages'),
 >
 > 'port': int(os.getenv('DB_PORT', 3306)),
->
-> 'charset': 'utf8mb4',
->
-> 'connection_timeout': 10,
->
-> 'pool_name': 'gestion_stages_pool',
->
-> 'pool_size': 5
 
 }
 
@@ -231,11 +203,11 @@ Résultat attendu :
 
 Test 2 – Compte étudiant
 
-> ● Email : jean.dupont@email.com ● Mot de passe : password123
+> ● Email : jean.dupont@email.com ● Mot de passe : bonjour123
 
 Test 3 – Compte administrateur ● Email : admin@ecole.fr
 
-> ● Mot de passe : password123
+> ● Mot de passe : simo123
 
 🐛 Dépannage
 
@@ -288,5 +260,6 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
