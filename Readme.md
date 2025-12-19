@@ -24,11 +24,9 @@ Je recommande Python 3.11
 
 b\) MySQL 8.0 
 
-> ● Télécharger MySQL Installer depuis https://www.mysql.com/ ● Choisir
-> Developer Default
+> ● Télécharger MySQL Installer depuis https://www.mysql.com/
 
-> ● Notez soigneusement le mot de passe root défini lors de
-> l’installation
+> ● Notez soigneusement le mot de passe root défini lors de l’installation
 
 c\) Git (optionnel) git --version
 
@@ -185,6 +183,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
