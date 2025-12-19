@@ -79,7 +79,7 @@ pip install -r requirements.txt
 
 ## Étape 3 : Vérification de la partie backend du code
 
-[<u>app.py</u>](http://app.py) :
+[<u>app.py</u>]([http://app.py](https://github.com/ismailjirari/dev-project/blob/main/backend/app.py)) :
 
 ⚠ Remplacez **password123@**par votre mot de passe MySQL réel
 
@@ -189,4 +189,5 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
