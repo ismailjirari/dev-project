@@ -1,5 +1,5 @@
 # Gestion des Stages  #
-Guide d’Installation
+## Guide d’Installation ##
 
 Ce document décrit pas à pas l’installation et l’exécution de
 l’application Gestion des Stages sur Windows (backend Flask + frontend
@@ -153,6 +153,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
