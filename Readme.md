@@ -1,4 +1,5 @@
-Gestion des Stages Guide d’Installation (Windows)
+# Gestion des Stages  # Plus grand (h1)
+Guide d’Installation
 
 Ce document décrit pas à pas l’installation et l’exécution de
 l’application Gestion des Stages sur Windows (backend Flask + frontend
@@ -83,22 +84,11 @@ DB_CONFIG = {
 
 . . .
 
-Étape 3 : Lancer l’Application Option A – Deux terminaux
+Étape 3 : Lancer l’Application :
 
-Terminal 1 – Backend
-
-cd C:\gestion-stages\backend venv\Scripts\activate
-
-python app.py
-
-Terminal 2 – Frontend
+Terminal  – Backend
 
 cd C:\gestion-stages\backend venv\Scripts\activate
-
-python -m http.server 8000 --directory ../frontend
-
-Option B – Backend uniquement (recommandé) cd C:\gestion-stages\backend
-venv\Scripts\activate
 
 python app.py
 
@@ -163,6 +153,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
