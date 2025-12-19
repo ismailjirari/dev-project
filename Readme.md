@@ -61,7 +61,7 @@ Fichier principal
 
 > ● Créez app.py
 
-Vérification :
+Étape 2 : Vérification de la partie backend du code
 
 [<u>app.py</u>](http://app.py) :
 
@@ -146,6 +146,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
