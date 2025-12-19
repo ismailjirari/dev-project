@@ -160,7 +160,7 @@ venv\Scripts\activate
 
 python app.py
 
-Quitter l’environnement virtuel :
+>. Quitter l’environnement virtuel :
 
 deactivate
 
@@ -185,6 +185,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
