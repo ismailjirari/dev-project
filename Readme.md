@@ -118,9 +118,9 @@ page etudiant :
 
 Test 1 – Compte étudiant
 
-> ● Email : jean.dupont@email.com ●
+> ● Email : jean.dupont@email.com 
 
-> Mot de passe : bonjour123
+> ● Mot de passe : bonjour123
 
 Test 2 – Compte administrateur 
 
@@ -185,6 +185,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
