@@ -59,8 +59,6 @@ pip install -r requirements.txt
 Fichier principal
 
 > ● Créez app.py
->
-> ● Collez le code backend Flask fourni
 
 Vérification :
 
@@ -153,6 +151,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
