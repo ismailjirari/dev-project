@@ -1,0 +1,201 @@
+<!-- admin.html :-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Gestion des Stages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Gestion Stages</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/student.html" data-auth="student">Mon Espace</a></li>
+                <li><a href="/admin.html" class="active">Administration</a></li>
+            </ul>
+            <div class="user-info">
+                <span class="user-name" id="userInfo"></span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container dashboard">
+        <div class="alert" id="pageAlert" style="display: none;"></div>
+        
+        <!-- Statistiques -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <h3>En attente</h3>
+                <div class="stat-value" id="statEnAttente">0</div>
+                <div class="stat-label">Stages à valider</div>
+            </div>
+            <div class="stat-card">
+                <h3>Validés</h3>
+                <div class="stat-value" id="statValide">0</div>
+                <div class="stat-label">Stages validés</div>
+            </div>
+            <div class="stat-card">
+                <h3>Refusés</h3>
+                <div class="stat-value" id="statRefuse">0</div>
+                <div class="stat-label">Stages refusés</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total</h3>
+                <div class="stat-value" id="statTotal">0</div>
+                <div class="stat-label">Stages déclarés</div>
+            </div>
+        </div>
+        
+        <!-- Liste des stages -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Gestion des stages</h2>
+                <div>
+                    <button class="btn btn-secondary btn-sm" onclick="refreshData()">
+                        <i class="fas fa-sync-alt"></i> Actualiser
+                    </button>
+                    <button class="btn btn-primary btn-sm" onclick="showAllStages()" style="margin-left: 0.5rem;">
+                        <i class="fas fa-list"></i> Voir tous
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Filtres -->
+            <div style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <div style="flex: 1;">
+                        <label for="filterStatus" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Filtrer par statut</label>
+                        <select id="filterStatus" class="form-control" style="width: auto;" onchange="filterStages()">
+                            <option value="">Tous les statuts</option>
+                            <option value="en_attente">En attente</option>
+                            <option value="valide">Validés</option>
+                            <option value="refuse">Refusés</option>
+                        </select>
+                    </div>
+                    <div style="flex: 2;">
+                        <label for="filterSearch" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Rechercher</label>
+                        <input 
+                            type="text" 
+                            id="filterSearch" 
+                            class="form-control" 
+                            placeholder="Rechercher par entreprise, sujet ou étudiant..."
+                            oninput="filterStages()"
+                        >
+                    </div>
+                </div>
+            </div>
+            
+            <div id="loadingData" class="spinner" style="display: none;"></div>
+            
+            <div id="noData" style="display: none; text-align: center; padding: 3rem; color: #64748b;">
+                <i class="fas fa-clipboard-list fa-3x" style="margin-bottom: 1rem; color: #cbd5e1;"></i>
+                <h3 style="margin-bottom: 0.5rem;">Aucun stage trouvé</h3>
+                <p>Aucun stage ne correspond à vos critères de recherche.</p>
+            </div>
+            
+            <div class="table-container">
+                <table id="stagesTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Étudiant</th>
+                            <th>Entreprise</th>
+                            <th>Sujet</th>
+                            <th>Période</th>
+                            <th>Statut</th>
+                            <th>Date déclaration</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stagesTableBody">
+                        <!-- Les stages seront insérés ici dynamiquement -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="pagination" style="display: none; margin-top: 1rem; text-align: center;">
+                <button class="btn btn-sm btn-secondary" id="prevPageBtn" disabled>
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                <span id="pageInfo" style="margin: 0 1rem;"></span>
+                <button class="btn btn-sm btn-secondary" id="nextPageBtn" disabled>
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Derniers stages (sur le côté en desktop) -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Liste des étudiants</h2>
+                </div>
+                <div id="loadingStudents" class="spinner" style="display: none;"></div>
+                <div id="noStudents" style="display: none; text-align: center; padding: 2rem; color: #64748b;">
+                    <p>Aucun étudiant inscrit</p>
+                </div>
+                <div class="table-container">
+                    <table id="studentsTable" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            <!-- Les étudiants seront insérés ici -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Derniers stages</h2>
+                </div>
+                <div id="recentStagesList">
+                    <!-- Les derniers stages seront insérés ici -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal pour voir les détails d'un stage -->
+    <div class="modal" id="stageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalStageTitle">Détails du stage</h3>
+                <button class="btn-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="stage-details" id="stageDetails">
+                    <!-- Les détails seront insérés ici -->
+                </div>
+            </div>
+            <div class="modal-footer" id="modalActions">
+                <!-- Actions seront insérées ici dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Gestion des Stages. Tous droits réservés.</p>
+            <p>Administration - Version 1.0.0</p>
+        </div>
+    </footer>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

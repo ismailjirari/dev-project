@@ -1,0 +1,153 @@
+<!-- index.html :-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Stages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Gestion Stages</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Accueil</a></li>
+                <li><a href="/student.html" data-auth="student">Mon Espace</a></li>
+                <li><a href="/admin.html" data-auth="admin">Administration</a></li>
+            </ul>
+            <div class="user-info" data-auth="authenticated" style="display: none;">
+                <span class="user-name" id="userInfo"></span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <h2>Gestion des Stages</h2>
+                    <p>Connectez-vous à votre compte</p>
+                </div>
+                
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-control" 
+                            placeholder="votre@email.com"
+                            required
+                        >
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            class="form-control" 
+                            placeholder="Votre mot de passe"
+                            required
+                        >
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+                    
+                    <div class="alert" id="loginAlert" style="display: none;"></div>
+                    
+                    <button type="submit" class="btn btn-primary" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i> Se connecter
+                    </button>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+                        <p style="color: #64748b; margin-bottom: 1rem;">Pas encore de compte ?</p>
+                        <button type="button" class="btn btn-secondary" onclick="showRegister()">
+                            <i class="fas fa-user-plus"></i> Créer un compte étudiant
+                        </button>
+                    </div>
+                </form>
+                
+                <form id="registerForm" class="auth-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="registerName">Nom complet</label>
+                        <input 
+                            type="text" 
+                            id="registerName" 
+                            class="form-control" 
+                            placeholder="Votre nom complet"
+                            required
+                        >
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input 
+                            type="email" 
+                            id="registerEmail" 
+                            class="form-control" 
+                            placeholder="votre@email.com"
+                            required
+                        >
+                        <div class="error-message" id="registerEmailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPassword">Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="registerPassword" 
+                            class="form-control" 
+                            placeholder="Minimum 6 caractères"
+                            required
+                        >
+                        <div class="error-message" id="registerPasswordError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmer le mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            class="form-control" 
+                            placeholder="Retapez votre mot de passe"
+                            required
+                        >
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+                    
+                    <div class="alert" id="registerAlert" style="display: none;"></div>
+                    
+                    <div style="display: flex; gap: 0.75rem;">
+                        <button type="button" class="btn btn-secondary" onclick="showLogin()" style="flex: 1;">
+                            <i class="fas fa-arrow-left"></i> Retour
+                        </button>
+                    <button type="submit" class="btn btn-primary" id="registerBtn" style="flex: 1;">
+                        <i class="fas fa-user-plus"></i> S'inscrire
+                    </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Gestion des Stages. Tous droits réservés.</p>
+            <p>Version 1.0.0</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

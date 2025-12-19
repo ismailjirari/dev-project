@@ -1,0 +1,170 @@
+<!-- student.html : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Étudiant - Gestion des Stages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Gestion Stages</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/student.html" class="active">Mon Espace</a></li>
+                <li><a href="/admin.html" data-auth="admin">Administration</a></li>
+            </ul>
+            <div class="user-info">
+                <span class="user-name" id="userInfo"></span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container dashboard">
+        <div class="alert" id="pageAlert" style="display: none;"></div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Déclarer un nouveau stage</h2>
+            </div>
+            <form id="stageForm" class="stage-form">
+                <div class="form-group">
+                    <label for="entreprise">Entreprise *</label>
+                    <input 
+                        type="text" 
+                        id="entreprise" 
+                        class="form-control" 
+                        placeholder="Nom de l'entreprise"
+                        required
+                    >
+                    <div class="error-message" id="entrepriseError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sujet">Sujet du stage *</label>
+                    <textarea 
+                        id="sujet" 
+                        class="form-control" 
+                        rows="3"
+                        placeholder="Description du stage, missions principales..."
+                        required
+                    ></textarea>
+                    <div class="error-message" id="sujetError"></div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date_debut">Date de début *</label>
+                        <input 
+                            type="date" 
+                            id="date_debut" 
+                            class="form-control" 
+                            required
+                        >
+                        <div class="error-message" id="dateDebutError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date_fin">Date de fin *</label>
+                        <input 
+                            type="date" 
+                            id="date_fin" 
+                            class="form-control" 
+                            required
+                        >
+                        <div class="error-message" id="dateFinError"></div>
+                    </div>
+                </div>
+                
+                <div class="alert" id="formAlert" style="display: none;"></div>
+                
+                <button type="submit" class="btn btn-primary" id="submitStageBtn">
+                    <i class="fas fa-paper-plane"></i> Déclarer le stage
+                </button>
+            </form>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Mes stages déclarés</h2>
+                <button class="btn btn-secondary btn-sm" onclick="refreshStages()">
+                    <i class="fas fa-sync-alt"></i> Actualiser
+                </button>
+            </div>
+            
+            <div id="loadingStages" class="spinner" style="display: none;"></div>
+            
+            <div id="noStages" style="display: none; text-align: center; padding: 3rem; color: #64748b;">
+                <i class="fas fa-clipboard-list fa-3x" style="margin-bottom: 1rem; color: #cbd5e1;"></i>
+                <h3 style="margin-bottom: 0.5rem;">Aucun stage déclaré</h3>
+                <p>Commencez par déclarer un stage en utilisant le formulaire ci-dessus.</p>
+            </div>
+            
+            <div class="table-container">
+                <table id="stagesTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Entreprise</th>
+                            <th>Sujet</th>
+                            <th>Période</th>
+                            <th>Statut</th>
+                            <th>Date déclaration</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stagesTableBody">
+                        <!-- Les stages seront insérés ici dynamiquement -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="stagesPagination" style="display: none; margin-top: 1rem; text-align: center;">
+                <button class="btn btn-sm btn-secondary" id="prevPageBtn" disabled>
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                <span id="pageInfo" style="margin: 0 1rem;"></span>
+                <button class="btn btn-sm btn-secondary" id="nextPageBtn" disabled>
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal pour voir les détails d'un stage -->
+    <div class="modal" id="stageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalStageTitle">Détails du stage</h3>
+                <button class="btn-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="stage-details" id="stageDetails">
+                    <!-- Les détails seront insérés ici -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Gestion des Stages. Tous droits réservés.</p>
+            <p>Espace Étudiant - Version 1.0.0</p>
+        </div>
+    </footer>
+
+    <script type="module" src="student.js"></script>
+</body>
+</html>
