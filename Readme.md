@@ -32,19 +32,8 @@ c\) Git (optionnel) git --version
 
 👉 Téléchargement : https://git-scm.com/
 
-Installation Pas à Pas
 
-Étape 1 : Préparer l’environnement
-
-mkdir C:\gestion-stages cd C:\gestion-stages
-
-mkdir backend mkdir frontend
-
-mkdir frontend\components
-
-explorer .
-
-Étape 2 : Configuration de la Base de Données 
+Étape 1 : Configuration de la Base de Données 
 1. Démarrer le service MySQL
 
 >. Ouvrir Services (services.msc) ● Démarrer MySQL (ou MySQL)
@@ -55,7 +44,7 @@ explorer .
 
 <img src="./bajn25cz.png" style="width:6.5in;height:3.65625in" />
 
-Étape 3 : Configuration du Backend (Flask) cd C:\gestion-stages\backend
+Étape 2 : Configuration du Backend (Flask) cd C:\gestion-stages\backend
 
 python -m venv venv venv\Scripts\activate
 
@@ -93,7 +82,7 @@ DB_CONFIG = {
 
 . . .
 
-Étape 5 : Lancer l’Application Option A – Deux terminaux
+Étape 3 : Lancer l’Application Option A – Deux terminaux
 
 Terminal 1 – Backend
 
@@ -114,7 +103,7 @@ python app.py
 
 ➡ Flask sert automatiquement le frontend
 
-Étape 6 : Accès à l’Application
+Étape 4 : Accès à l’Application
 
 Ouvrir le navigateur :
 
@@ -173,6 +162,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
