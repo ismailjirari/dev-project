@@ -3,11 +3,12 @@
 
 Par :
 
-JIRARI ISMAIL
+NOUR ELHODA (DATABASE)
 
-CHADLI HAMZA
+JIRARI ISMAIL (BACKEND)
 
-NOUR ELHODA
+CHADLI HAMZA (FRONTEND)
+
 
 Ce document décrit pas à pas l’installation et l’exécution de
 l’application Gestion des Stages (backend Flask + frontend
@@ -196,6 +197,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
