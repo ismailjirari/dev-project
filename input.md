@@ -1,10 +1,10 @@
-🎓 GestiondesStages–Guided’Installation (Windows)
+Gestion des Stages Guide d’Installation (Windows)
 
 Ce document décrit pas à pas l’installation et l’exécution de
 l’application Gestion des Stages sur Windows (backend Flask + frontend
 HTML/JS + base de données MySQL).
 
-📋 Prérequis
+Prérequis
 
 Avant de commencer, assurez-vous d’avoir installé les outils suivants :
 
@@ -32,7 +32,7 @@ c\) Git (optionnel) git --version
 
 👉 Téléchargement : https://git-scm.com/
 
-🚀 Installation Pas à Pas
+Installation Pas à Pas
 
 Étape 1 : Préparer l’environnement
 
@@ -210,6 +210,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
