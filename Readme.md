@@ -124,23 +124,28 @@ python --version
 
 📁 Structure Finale du Projet
 
+## 📁 Structure du Projet
+
+```text
 gestion-stages/
 ├── backend/
-│ ├── venv/ # Environnement virtuel Python
-│ ├── logs/ # Fichiers de logs de l'application
-│ ├── app.py # Point d'entrée de l'API backend
-│ ├── requirements.txt # Dépendances Python
+│   ├── venv/              # Environnement virtuel Python
+│   ├── logs/              # Fichiers de logs de l'application
+│   ├── app.py             # Point d'entrée de l'API backend
+│   ├── requirements.txt   # Dépendances Python
 └── frontend/
-├──────components/
-│   ├──── api.js # Fonctions d'appel à l'API backend
-│   └──── auth.js # Gestion de l'authentification
-├── index.html # Page d'accueil / connexion
-├── student.html # Interface étudiante
-├── admin.html # Interface administrateur
-├── script.js # Script commun
-├── student.js # Logique spécifique étudiant
-├── admin.js # Logique spécifique administrateur
-└── styles.css # Styles CSS communs
+    ├── components/
+    │   ├── api.js         # Fonctions d'appel à l'API backend
+    │   └── auth.js        # Gestion de l'authentification
+    ├── index.html         # Page d'accueil / connexion
+    ├── student.html       # Interface étudiante
+    ├── admin.html         # Interface administrateur
+    ├── script.js          # Script commun
+    ├── student.js         # Logique spécifique étudiant
+    ├── admin.js           # Logique spécifique administrateur
+    └── styles.css         # Styles CSS communs
+```
+
 
 🔄 CommandesUtiles
 
@@ -151,17 +156,3 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
-
-
-
-
-
-
-
-
-
-
-
-
-
-
