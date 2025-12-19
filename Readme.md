@@ -1,5 +1,6 @@
-# Gestion des Stages  #
-## Guide d’Installation ##
+# Gestion des Stages  
+## Guide d’Installation Par JIRARI ISMAIL
+
 
 Ce document décrit pas à pas l’installation et l’exécution de
 l’application Gestion des Stages (backend Flask + frontend
@@ -182,6 +183,7 @@ Une vidéo illustrant la réalisation complète et le fonctionnement de l’appl
 
 Et une autre vidéo qui explique comment créer un environnement virtuel dans le dossier du backend.
 
+
 👉 Lien Google Drive :
 🔗 https://drive.google.com/drive/folders/1ef44SMkJFzQC4DUocbN1d5ZdqBqQUTVq
 
@@ -194,10 +196,3 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
-
-
-
-
-
-
-
