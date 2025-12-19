@@ -35,7 +35,7 @@ c\) Git (optionnel) git --version
 👉 Téléchargement : https://git-scm.com/
 
 
-Étape 1 : Configuration de la Base de Données 
+## Étape 1 : Configuration de la Base de Données 
 
 1. Démarrer le service MySQL
 
@@ -47,7 +47,7 @@ c\) Git (optionnel) git --version
 
 <img src="./bajn25cz.png" style="width:6.5in;height:3.65625in" />
 
-Étape 2 : Configuration du Backend (Flask) 
+## Étape 2 : Configuration du Backend (Flask) 
 
 cd C:\gestion-stages\backend
 
@@ -67,7 +67,7 @@ Fichier principal
 
 > ● Créez app.py
 
-Étape 3 : Vérification de la partie backend du code
+## Étape 3 : Vérification de la partie backend du code
 
 [<u>app.py</u>](http://app.py) :
 
@@ -89,7 +89,7 @@ DB_CONFIG = {
 
 . . .
 
-Étape 4 : Lancer l’Application :
+## Étape 4 : Lancer l’Application :
 
 Terminal  – Backend
 
@@ -99,7 +99,7 @@ python app.py
 
 ➡ Flask sert automatiquement le frontend
 
-Étape 5 : Accès à l’Application
+## Étape 5 : Accès à l’Application
 
 Ouvrir le navigateur :
 
@@ -158,7 +158,7 @@ deactivate
 
 
 
-🎥 Vidéo de démonstration du projet
+## 🎥 Vidéo de démonstration du projet
 
 Une vidéo illustrant la réalisation complète et le fonctionnement de l’application Gestion des Stages (backend Flask, frontend HTML/JS et base de données MySQL) est disponible via Google Drive.
 
@@ -176,6 +176,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
