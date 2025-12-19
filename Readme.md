@@ -158,6 +158,22 @@ deactivate
 
 
 
+🎥 Vidéo de démonstration du projet
+
+Une vidéo illustrant la réalisation complète et le fonctionnement de l’application Gestion des Stages (backend Flask, frontend HTML/JS et base de données MySQL) est disponible via Google Drive.
+
+👉 Lien Google Drive :
+🔗 https://drive.google.com/drive/folders/1ef44SMkJFzQC4DUocbN1d5ZdqBqQUTVq
+
+📌 Cette vidéo présente notamment :
+
+La configuration de la base de données MySQL
+
+Le lancement du backend Flask
+
+L’interface de connexion (étudiant / administrateur)
+
+Les principales fonctionnalités de l’application
 
 
 
