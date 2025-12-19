@@ -47,7 +47,6 @@ cd dev-project
 
 1. Démarrer le service MySQL
 
->. Ouvrir Services (services.msc) ● Démarrer MySQL (ou MySQL)
 
 <img src="./yzlbtmzl.png" style="width:6.5in;height:3.65625in" />
 
@@ -195,6 +194,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
