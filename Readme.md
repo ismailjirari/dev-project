@@ -105,6 +105,15 @@ Ouvrir le navigateur :
 
 👉 http://localhost:5000
 
+page administrateur :
+
+<img src="./administrateur.png" style="width:6.5in;height:3.65625in" />
+
+page etudiant :
+
+<img src="./etudiant.png" style="width:6.5in;height:3.65625in" />
+
+
 🔧 Tests de Connexion
 
 Test 1 – Compte étudiant
@@ -176,6 +185,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
