@@ -93,56 +93,6 @@ DB_CONFIG = {
 
 . . .
 
-||
-||
-||
-||
-
-import mysql.connector
-
-from mysql.connector import errorcode
-
-\# Informations de connexion
-
-host = "localhost"
-
-user = "root" \# votre utilisateur MySQL
-
-password = "votre mot de passe MySQL réel"
-
-\# Nom de la base de données
-
-db_name = "gestion_stages"
-
-\# Connexion au serveur MySQL
-
-try:
-
-> conn = mysql.connector.connect(
->
-> host=host,
->
-> user=user,
->
-> password=password
->
-> )
->
-> cursor = conn.cursor()
->
-> print("Connexion réussie à MySQL !")
-
-except mysql.connector.Error as err:
-
-> print(f"Erreur de connexion : {err}")
->
-> exit(1)
-
-\# Fermeture de la connexion
-
-cursor.close()
-
-conn.close()
 
 Étape 4 : Configuration du Frontend cd C:\gestion-stages\frontend
 
@@ -260,6 +210,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
