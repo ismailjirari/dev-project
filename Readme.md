@@ -36,6 +36,7 @@ c\) Git (optionnel) git --version
 
 
 Étape 1 : Configuration de la Base de Données 
+
 1. Démarrer le service MySQL
 
 >. Ouvrir Services (services.msc) ● Démarrer MySQL (ou MySQL)
@@ -98,13 +99,17 @@ Ouvrir le navigateur :
 
 👉 http://localhost:5000
 
-🔧 TestsdeConnexion
+🔧 Tests de Connexion
 
 Test 1 – Compte étudiant
 
-> ● Email : jean.dupont@email.com ● Mot de passe : bonjour123
+> ● Email : jean.dupont@email.com ●
 
-Test 3 – Compte administrateur ● Email : admin@ecole.fr
+> Mot de passe : bonjour123
+
+Test 2 – Compte administrateur 
+
+> ● Email : admin@ecole.fr
 
 > ● Mot de passe : simo123
 
@@ -133,6 +138,7 @@ gestion-stages/
 │   ├── logs/              # Fichiers de logs de l'application
 │   ├── app.py             # Point d'entrée de l'API backend
 │   ├── requirements.txt   # Dépendances Python
+│   ├── test.py   # Fichier pour teester la connexion avec mysql et la database :"gestion_stages"
 └── frontend/
     ├── components/
     │   ├── api.js         # Fonctions d'appel à l'API backend
@@ -156,3 +162,4 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
