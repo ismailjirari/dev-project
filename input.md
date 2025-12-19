@@ -32,7 +32,7 @@ c\) Git (optionnel) git --version
 
 👉 Téléchargement : https://git-scm.com/
 
-🚀 InstallationPasàPas
+🚀 Installation Pas à Pas
 
 Étape 1 : Préparer l’environnement
 
@@ -260,6 +260,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
