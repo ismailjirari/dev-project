@@ -57,15 +57,25 @@ cd dev-project
 
 ## Étape 2 : Configuration du Backend (Flask) 
 
-cd C:\gestion-stages\backend
+```text
+cd C:\dev-project\backend
 
+```
+
+```text
 python -m venv venv 
 
+```
+```text
 venv\Scripts\activate
 
-Installation des dépendances
+```
 
+>. Installation des dépendances
+```text
 pip install -r requirements.txt
+
+```
 
 
 
@@ -101,9 +111,17 @@ DB_CONFIG = {
 
 Terminal  – Backend
 
-cd C:\gestion-stages\backend venv\Scripts\activate
+```text
+cd C:\dev-project\backend 
+```
 
+```text
+venv\Scripts\activate
+```
+
+```text
 python app.py
+```
 
 ➡ Flask sert automatiquement le frontend
 
@@ -139,7 +157,7 @@ Test 2 – Compte administrateur
 ## 📁 Structure du Projet
 
 ```text
-gestion-stages/
+dev-project/
 ├── backend/
 │   ├── venv/              # Environnement virtuel Python
 │   ├── logs/              # Fichiers de logs de l'application
@@ -162,7 +180,7 @@ gestion-stages/
 
 🔄 CommandesUtiles
 
-cd C:\gestion-stages\backend
+cd C:\dev-project\backend
 
 venv\Scripts\activate
 
@@ -193,14 +211,6 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
-
-
-
-
-
-
-
-
 
 
 
