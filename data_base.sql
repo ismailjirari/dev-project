@@ -45,7 +45,6 @@ INSERT INTO users (nom, email, role) VALUES
 
 INSERT INTO student_auth (user_id, email, password_hash) VALUES
 (1, 'jean.dupont@email.com', '$2y$10$LWgWn4lqlrCpK0OmPcKreepVHFyZFOzO/QIlVNSnKf7nTU0W5415m'), -- bonjour123
-(2, 'marie.martin@email.com', '$2y$10$QeM/GDutKt873OzdsYsJHOOfTNpFthPCdkWc2sKdr/RX4zMr94T.W'); -- marie123
 
 INSERT INTO admin_auth (user_id, email, password_hash) VALUES
 (3, 'admin@ecole.fr', '$2y$10$XcsNP573MKm391ALcOKahucJeMt2DzOqpNjO/weAjf8rIKXbOfTTS'); -- simo123
