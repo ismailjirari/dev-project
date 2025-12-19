@@ -67,7 +67,7 @@ Fichier principal
 
 > ● Créez app.py
 
-Étape 2 : Vérification de la partie backend du code
+Étape 3 : Vérification de la partie backend du code
 
 [<u>app.py</u>](http://app.py) :
 
@@ -89,7 +89,7 @@ DB_CONFIG = {
 
 . . .
 
-Étape 3 : Lancer l’Application :
+Étape 4 : Lancer l’Application :
 
 Terminal  – Backend
 
@@ -99,7 +99,7 @@ python app.py
 
 ➡ Flask sert automatiquement le frontend
 
-Étape 4 : Accès à l’Application
+Étape 5 : Accès à l’Application
 
 Ouvrir le navigateur :
 
@@ -145,13 +145,16 @@ gestion-stages/
 
 🔄 CommandesUtiles
 
-cd C:\gestion-stages\backend\venv\Scripts\activate
+cd C:\gestion-stages\backend
+
+venv\Scripts\activate
 
 python app.py
 
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
