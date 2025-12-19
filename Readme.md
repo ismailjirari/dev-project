@@ -1,6 +1,13 @@
 # Gestion des Stages  
-## Guide d’Installation Par JIRARI ISMAIL
+## Guide d’Installation 
 
+Par :
+
+JIRARI ISMAIL
+
+CHADLI HAMZA
+
+NOUR ELHODA
 
 Ce document décrit pas à pas l’installation et l’exécution de
 l’application Gestion des Stages (backend Flask + frontend
@@ -189,6 +196,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
