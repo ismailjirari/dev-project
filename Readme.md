@@ -135,7 +135,7 @@ gestion-stages/
 │   ├── logs/              # Fichiers de logs de l'application
 │   ├── app.py             # Point d'entrée de l'API backend
 │   ├── requirements.txt   # Dépendances Python
-│   ├── test.py   # Fichier pour teester la connexion avec mysql et la database :"gestion_stages"
+│   ├── test.py   # Fichier pour tester la connexion avec mysql et la database :"gestion_stages"
 └── frontend/
     ├── components/
     │   ├── api.js         # Fonctions d'appel à l'API backend
@@ -183,6 +183,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
