@@ -32,6 +32,16 @@ c\) Git (optionnel) git --version
 
 👉 Téléchargement : https://git-scm.com/
 
+Cloner le dépôt :
+
+```text
+git clone https://github.com/ismailjirari/dev-project.git
+```
+puis entrer dans le dépôt :
+
+```text
+cd dev-project
+```
 
 ## Étape 1 : Configuration de la Base de Données 
 
@@ -183,6 +193,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
