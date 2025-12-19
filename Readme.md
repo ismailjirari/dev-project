@@ -113,20 +113,6 @@ Test 2 – Compte administrateur
 
 > ● Mot de passe : simo123
 
-🐛 Dépannage
-
-MySQL ne démarre pas services.msc
-
-Démarrer le service MySQL manuellement
-
-Erreur de connexion MySQL mysql -u root -p
-
-Problème Python
-
-venv\Scripts\activate pip list
-
-python --version
-
 📁 Structure Finale du Projet
 
 ## 📁 Structure du Projet
@@ -162,4 +148,5 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
