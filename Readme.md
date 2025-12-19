@@ -89,23 +89,20 @@ Fichier principal
 
 [<u>app.py</u>](http://app.py) :
 
-. . .
 
+```text
+
+# Configuration de la base de données
 DB_CONFIG = {
-
-> 'host': os.getenv('DB_HOST', 'localhost'),
->
-> 'user': os.getenv('DB_USER', 'root'),
->
-> 'password': os.getenv('DB_PASSWORD', 'votre mot de passe MySQL réel'),
->
-> 'database': os.getenv('DB_NAME', 'gestion_stages'),
->
-> 'port': int(os.getenv('DB_PORT', 3306)),
+    'host': os.getenv('DB_HOST', 'localhost'),
+    'user': os.getenv('DB_USER', 'root'),
+    'password': os.getenv('DB_PASSWORD', 'password123@'),
+    'database': os.getenv('DB_NAME', 'gestion_stages'),
+    'port': int(os.getenv('DB_PORT', 3306)),
 
 }
 
-. . .
+```
 
 ## Étape 4 : Lancer l’Application :
 
@@ -198,6 +195,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
