@@ -113,8 +113,6 @@ Test 2 – Compte administrateur
 
 > ● Mot de passe : simo123
 
-📁 Structure Finale du Projet
-
 ## 📁 Structure du Projet
 
 ```text
@@ -148,5 +146,6 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
