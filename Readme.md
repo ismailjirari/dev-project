@@ -178,19 +178,6 @@ dev-project/
 ```
 
 
-🔄 CommandesUtiles
-
-cd C:\dev-project\backend
-
-venv\Scripts\activate
-
-python app.py
-
->. Quitter l’environnement virtuel :
-
-deactivate
-
-
 
 
 ## 🎥 Vidéo de démonstration du projet
@@ -211,6 +198,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
