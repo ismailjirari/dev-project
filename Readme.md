@@ -93,29 +93,6 @@ DB_CONFIG = {
 
 . . .
 
-
-Étape 4 : Configuration du Frontend cd C:\gestion-stages\frontend
-
-Créer les fichiers HTML : - index.html- student.html- admin.html
-
-Créer les fichiers JavaScript :
-
-cd components
-
-> ● api.js ● auth.js
-
-cd ..
-
-> ● script.js ● student.js ● admin.js
-
-Créer le fichier CSS : - styles.css
-
-Vérification :
-
-dir
-
-dir components
-
 Étape 5 : Lancer l’Application Option A – Deux terminaux
 
 Terminal 1 – Backend
@@ -145,13 +122,7 @@ Ouvrir le navigateur :
 
 🔧 TestsdeConnexion
 
-Test 1 – Santé du backend http://localhost:5000/api/health
-
-Résultat attendu :
-
-{"status": "ok", "database": "connected"}
-
-Test 2 – Compte étudiant
+Test 1 – Compte étudiant
 
 > ● Email : jean.dupont@email.com ● Mot de passe : bonjour123
 
@@ -167,49 +138,42 @@ Démarrer le service MySQL manuellement
 
 Erreur de connexion MySQL mysql -u root -p
 
-Vérifier le fichier .env
-
-Port 5000 déjà utilisé
-
-netstat -ano **\|** **findstr** :5000 taskkill /PID 1234 /F
-
 Problème Python
 
 venv\Scripts\activate pip list
 
 python --version
 
-Problème d’inscription
+📁 Structure Finale du Projet
 
-curl -X POST http://localhost:5000/api/register/student ^ -H
-"Content-Type: application/json" ^
-
--d
-"{\\nom\\:\\Test\\,\\email\\:\\test@test.com\\,\\password\\:\\password123\\}"
-
-📁 StructureFinaleduProjet
-
-C:\gestion-stages\\ ├── backend\\
-
-│ ├── venv\\ │ ├── logs\\ │ ├── app.py
-
-│ ├── requirements.txt │ └── .env
-
-└── frontend\\
-
-> ├── components\\ │ ├── api.js │ └── auth.js ├── index.html ├──
-> student.html ├── admin.html ├── script.js ├── student.js ├── admin.js
-> └── styles.css
+gestion-stages/
+├── backend/
+│ ├── venv/ # Environnement virtuel Python
+│ ├── logs/ # Fichiers de logs de l'application
+│ ├── app.py # Point d'entrée de l'API backend
+│ ├── requirements.txt # Dépendances Python
+└── frontend/
+├──────components/
+│   ├──── api.js # Fonctions d'appel à l'API backend
+│   └──── auth.js # Gestion de l'authentification
+├── index.html # Page d'accueil / connexion
+├── student.html # Interface étudiante
+├── admin.html # Interface administrateur
+├── script.js # Script commun
+├── student.js # Logique spécifique étudiant
+├── admin.js # Logique spécifique administrateur
+└── styles.css # Styles CSS communs
 
 🔄 CommandesUtiles
 
-cd C:\gestion-stages\backend venv\Scripts\activate
+cd C:\gestion-stages\backend\venv\Scripts\activate
 
 python app.py
 
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
