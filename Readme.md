@@ -47,13 +47,19 @@ c\) Git (optionnel) git --version
 
 <img src="./bajn25cz.png" style="width:6.5in;height:3.65625in" />
 
-Étape 2 : Configuration du Backend (Flask) cd C:\gestion-stages\backend
+Étape 2 : Configuration du Backend (Flask) 
 
-python -m venv venv venv\Scripts\activate
+cd C:\gestion-stages\backend
+
+python -m venv venv 
+
+venv\Scripts\activate
 
 Installation des dépendances
 
 pip install -r requirements.txt
+
+
 
 ⚠ Remplacez **password123@**par votre mot de passe MySQL réel
 
@@ -146,6 +152,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
