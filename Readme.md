@@ -15,8 +15,8 @@ python --version
 python -m pip --version
 
 👉 Si Python n’est pas installé : - Téléchargez-le depuis
-https://www.python.org/ - ⚠ Cochez Add Python to PATH lors de
-l’installation
+https://www.python.org/ - 
+⚠ Cochez Add Python to PATH lors de l’installation
 
 Je recommande Python 3.11
 
@@ -162,6 +162,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
