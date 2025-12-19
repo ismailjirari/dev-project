@@ -1,4 +1,4 @@
-# Gestion des Stages  # Plus grand (h1)
+# Gestion des Stages  #
 Guide d’Installation
 
 Ce document décrit pas à pas l’installation et l’exécution de
@@ -153,6 +153,7 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
 
 
