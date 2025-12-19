@@ -49,8 +49,9 @@ MySQL
 
 > ● Ouvrir Services (services.msc) ● Démarrer MySQL (ou MySQL)
 
-<img src="./yzlbtmzl.png" style="width:6.5in;height:3.65625in" />2.
-Prendre le fichier data_base.sql puis runner la commande
+<img src="./yzlbtmzl.png" style="width:6.5in;height:3.65625in" />
+
+2. Prendre le fichier data_base.sql puis runner la commande
 
 <img src="./bajn25cz.png" style="width:6.5in;height:3.65625in" />
 
@@ -287,4 +288,5 @@ python app.py
 Quitter l’environnement virtuel :
 
 deactivate
+
 
