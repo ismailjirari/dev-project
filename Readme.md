@@ -3,11 +3,9 @@
 
 Par :
 
-NOUR ELHODA (DATABASE)
+JIRARI ISMAIL
 
-JIRARI ISMAIL (BACKEND)
 
-CHADLI HAMZA (FRONTEND)
 
 
 Ce document décrit pas à pas l’installation et l’exécution de
@@ -197,6 +195,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
