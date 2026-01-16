@@ -55,11 +55,11 @@ cd dev-project
 1. Démarrer le service MySQL
 
 
-<img src="./yzlbtmzl.png" style="width:6.5in;height:3.65625in" />
+<img src="./sql_erp.png" style="width:6.5in;height:3.65625in" />
 
-2. Prendre le fichier data_base.sql puis runner la commande
+2. Prendre le fichier gestion_stages.sql puis runner la commande
 
-<img src="./bajn25cz.png" style="width:6.5in;height:3.65625in" />
+<img src="./sql_run.png" style="width:6.5in;height:3.65625in" />
 
 ## Étape 2 : Configuration du Backend (Flask) 
 
@@ -197,6 +197,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
