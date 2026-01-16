@@ -87,7 +87,6 @@ pip install -r requirements.txt
 
 [<u>app.py</u>] ([http://app.py](https://github.com/ismailjirari/dev-project/blob/main/backend/app.py)) :
 
-⚠ Remplacez **password123@**par votre mot de passe MySQL réel
 
 ```text
 
@@ -95,7 +94,7 @@ pip install -r requirements.txt
 DB_CONFIG = {
     'host': os.getenv('DB_HOST', 'localhost'),
     'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', 'password123@'),
+    'password': os.getenv('DB_PASSWORD', 'votre mot de passe MySQL réel'),
     'database': os.getenv('DB_NAME', 'gestion_stages'),
     'port': int(os.getenv('DB_PORT', 3306)),
 
@@ -197,6 +196,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
