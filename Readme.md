@@ -174,7 +174,9 @@ dev-project/
 ```
 
 
+##  Architecture globale :
 
+<img src="./Architecture de projet .png" style="width:6.5in;height:3.65625in" />
 
 ## 🎥 Vidéo de démonstration du projet
 
@@ -195,6 +197,7 @@ Le lancement du backend Flask
 L’interface de connexion (étudiant / administrateur)
 
 Les principales fonctionnalités de l’application
+
 
 
 
