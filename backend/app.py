@@ -44,7 +44,7 @@ CORS(app, resources={
 DB_CONFIG = {
     'host': os.getenv('DB_HOST', 'localhost'),
     'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', 'password123@'),
+    'password': os.getenv('DB_PASSWORD', 'votre mot de passe MySQL réel'),
     'database': os.getenv('DB_NAME', 'gestion_stages'),
     'port': int(os.getenv('DB_PORT', 3306)),
 
